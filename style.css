@@ -67,6 +67,7 @@ nav{
     background: linear-gradient(to right, #fdc830, #f37335);
     border: none;
     border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
 }
 
 
