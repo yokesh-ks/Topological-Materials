@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #11121A;
+    color: White;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+nav{
+    width: 100vw;
+    height: 75px;
+    
+    background-color: #1C1C24;
+}
+
+.navbar{
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-transform: capitalize;
+    color:#f37335;
+}
+
+/* search container */
+.search{
+    width: 100vw;
+}
+
+.search-container{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-grow: 1;
+   
+    border-radius: 10px;
+}
+
+.input-container input {
+    flex-grow: 1;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid #222328;
+    color: white; 
+    background-color: #11121A;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.search-btn{
+    font-size: 20px;
+    padding: 12px 32px;
+    background: linear-gradient(to right, #fdc830, #f37335);
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+/* main */
+
+.main{
+    padding: 24px;
+    max-width: 1110px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(18, 0fr);
+    gap: 10px;
+}
+
+.element{
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    background: #1C1C24;
+}
+
+.symbol{
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.symbol.active{
+    background: -webkit-linear-gradient(to right, #fdc830, #f37335);
+  background: linear-gradient(to right, #fdc830, #f37335);
+}
+
+abbr[title] {
+    border-bottom: none !important;
+    cursor: inherit !important;
+    text-decoration: none !important;
+  }
+
+.atomic-number{
+    font-size: 8px;
+    position: absolute;
+    margin: 8px;
+}
+
+.Helium{
+    grid-column-start: 18;
+}
+
+.Boron, .Aluminium{
+    grid-column-start: 13;
+}
+
+.Hafnium, .Rutherfordium, .Lanthanum, .Actinium{
+    grid-column-start: 4;
+}
