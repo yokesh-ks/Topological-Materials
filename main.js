@@ -6,47 +6,18 @@ search.addEventListener("click", function () {
     let result = text.value;
     const split = result.split(" ");
     result= split.join("");
-    console.log(result);
-    $.ajax({url: "https://www.materialsproject.org/rest/v2/materials/FeO/vasp?API_KEY=arSoZc9MekEHUDuh",crossDomain: true, success: function(result){
-        console.log(result);
-      }});
-   const url = "https://www.materialsproject.org/rest/v2/materials/FeO/vasp?API_KEY=arSoZc9MekEHUDuh";
-    fetch(url, {
-        method: "GET",
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow',
         mode: 'no-cors',
-        credentials: 'same-origin',
-        header: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(),
-    })
-    .then(function(response){
-        console.log(response.json());
-    }).then(data => {
-        console.log(data);
-    })
-
-
-    /*getData('https://example.com/answer', { answer: 42 })
-  .then(data => {
-    console.log(data); // JSON data parsed by `data.json()` call
-  });*/
+      };
+      
+      fetch("https://www.materialsproject.org/rest/v2/materials/FeO/vasp?API_KEY=arSoZc9MekEHUDuh", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+    
 })
-
-/*async function getData(url = '', data = {}) {
-    const response = await fetch(url, {
-      method: 'GET', // *GET, POST, PUT, DELETE, etc.
-      mode: 'no-cors', // no-cors, *cors, same-origin
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'same-origin', // include, *same-origin, omit
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-    return response.json();
-}*/
-
 
 /* input display*/
 function searchResult(elementList){
